@@ -23,8 +23,8 @@ export default NextAuth({
             q.Not(
               q.Exists(
                 q.Match(
-                  q.Index('user_by_email'),
-                  q.Casefold(email)
+                  q.Index('user_by_email'), // index de busca no banco do fauna
+                  q.Casefold(email) // Casefold = normalizador de campo
                 )
               )
             ),
