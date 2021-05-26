@@ -77,11 +77,11 @@ export default NextAuth({
             )
           )
         )
+        return true 
 
-        return true        
-      } catch(e) {
-        console.log(e)
+      } catch {        
         return false
+
       }
     },
 
