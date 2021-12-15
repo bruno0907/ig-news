@@ -1,10 +1,8 @@
 import Stripe from 'stripe'
 import packageInfo from '../../package.json'
 
-const apiKey = String(process.env.STRIPE_SECRET_KEY)
-
 const stripe = new Stripe(
-  apiKey, {
+  String(process.env.STRIPE_SECRET_KEY), {
     apiVersion: '2020-08-27',
     appInfo: {
       name: 'Ignews',
