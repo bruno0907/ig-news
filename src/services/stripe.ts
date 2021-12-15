@@ -1,7 +1,7 @@
 import Stripe from 'stripe'
 import packageInfo from '../../package.json'
 
-const apiKey = String(process.env.STRIPE_API_KEY)
+const apiKey = String(process.env.STRIPE_SECRET_KEY)
 
 const stripe = new Stripe(
   apiKey, {
