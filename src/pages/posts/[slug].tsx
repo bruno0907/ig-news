@@ -51,7 +51,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
 
   const prismic = getPrismicCliente(req)
 
-  const response = await prismic.getByUID('post', String(slug), {})  
+  const response = await prismic.getByUID('post', String(slug), {})
 
   const updatedAt = new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
     day: '2-digit', 
